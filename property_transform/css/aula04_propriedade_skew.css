@@ -1,0 +1,14 @@
+.S{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skew:hover{
+    transform: skew(20deg);
+}
+.skewx:hover{
+    transform: skewX(45deg);
+}
+.skewy:hover{
+    transform: skewY(20deg);
+}
