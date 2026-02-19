@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* SELETOR UNIVERSAL PARA DEFINIR UMA UNICA FAMILIA DE FONTE PARA OS TEXTOS DA NOSSA PAGINA */
+*{
+    font-family: "Montserrat", sans-serif;
+    color: #ccc;
+    letter-spacing: 0.5px;
+}
+
+body{
+    background-color: #121111;
+}
+h1{
+    text-align: center;
+}
+ins{
+    color: rgb(213, 102, 156);
+    background-color: rgba(81, 50, 50, 0.361);
+    padding-inline: 5px;
+    font-weight: 600;
+}
+ul li{
+    margin: 10px 0px;
+}
+
+/* MOSTAR O USO DA PROPRIEDADE TRANSFORM */
+.conteiner{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.testes{
+    width: 350px;
+    height: 300px;
+    background-color: #d9d7d7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+
+    & div.tran{
+        width: 150px;
+        height: 150px;
+        background-color: rgb(246, 67, 35);
+        position: absolute;
+        top: 11px;
+        left: 11px;
+        z-index: 1;
+        transition: all 2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & div.tranx{
+        width: 150px;
+        height: 150px;
+        background-color: rgb(246, 67, 35);
+        position: absolute;
+        top: 11px;
+        left: 11px;
+        z-index: 1;
+        transition: all 2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & div.trany{
+        width: 150px;
+        height: 150px;
+        background-color: rgb(246, 67, 35);
+        position: absolute;
+        top: 11px;
+        left: 11px;
+        z-index: 1;
+        transition: all 2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+.ori{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    color: #121111;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px dashed #121111;
+    z-index: 1px;
+}
+div.tran:hover {
+    transform: translate(70px, 50px);
+    opacity: .6;
+
+}
+div.tranx:hover {
+    transform: translate(100px, 0px);
+    opacity: .6;
+
+}
+div.trany:hover {
+    transform: translate(0px, 100px);
+    opacity: .6;
+
+}
