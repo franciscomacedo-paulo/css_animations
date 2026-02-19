@@ -1,0 +1,30 @@
+ul{
+    margin-bottom: 40px;
+}
+div.S{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* AUMENTANDO  O TAMANHO DOS ELEMENTOS */
+.scale:hover{
+    transform: scale(1.5);
+}
+.scalex:hover{
+    transform: scaleX(1.5);
+}
+.scaley:hover{
+    transform: scaleY(1.5);
+}
+
+/* DIMINUINDO O TAMANHO DOS ELEMENTOS */
+.scalexyd:hover{
+    transform: scale(0.6);
+}
+.scalexd:hover{
+    transform: scaleX(0.6);
+}
+.scaleyd:hover{
+    transform: scaleY(0.6);
+}
