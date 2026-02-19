@@ -5,12 +5,58 @@
     color: #ccc;
     letter-spacing: 0.5px;
 }
+:root{
+    --border-radius: 10px
+}
 
 body{
     background-color: #121111;
 }
 h1{
     text-align: center;
+}
+/** ================================================================== */
+/* ESTILIZANDO OS LINKS DA NOSSA NAV BAR*/
+/** ================================================================== */
+nav{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+     & ul{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        justify-content: start;
+        margin: 0;
+        padding: 0;
+
+        & li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid tomato; */
+
+            & a:link{
+                text-decoration: none;
+                padding: 10px;
+                /* display: block; */
+
+            }
+            & a:active{
+                color: tomato;
+            }
+
+            & a:hover{
+                background-color: #1b1b1b;
+                border-radius: var(--border-radius);
+                color: rgb(213, 102, 156);
+            }
+        }
+        
+     }
 }
 ins{
     color: rgb(213, 102, 156);
@@ -21,14 +67,29 @@ ins{
 ul li{
     margin: 10px 0px;
 }
-
-/* MOSTAR O USO DA PROPRIEDADE TRANSFORM */
+.t{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(246, 67, 35);
+    transition: all 2s;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #121111;
+}
+/** ================================================================== */
+/* MOSTAR O USO DA PROPRIEDADE TRANSFORM TRANSLATE()*/
+/** ================================================================== */
 .conteiner{
     display: flex;
     gap: 16px;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    border-radius: 10px;
 }
 .testes{
     width: 350px;
@@ -40,23 +101,19 @@ ul li{
     position: relative;
 
     & div.tran{
-        width: 150px;
-        height: 150px;
-        background-color: rgb(246, 67, 35);
         position: absolute;
         top: 11px;
         left: 11px;
         z-index: 1;
-        transition: all 2s;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: var(--border-radius);
+        
     }
 
     & div.tranx{
-        width: 150px;
-        height: 150px;
-        background-color: rgb(246, 67, 35);
+        --boder_radius: 10px;
         position: absolute;
         top: 11px;
         left: 11px;
@@ -64,13 +121,10 @@ ul li{
         transition: all 2s;
         display: flex;
         align-items: center;
-        justify-content: center;
+        border-radius: var(--boder_radius);
     }
 
     & div.trany{
-        width: 150px;
-        height: 150px;
-        background-color: rgb(246, 67, 35);
         position: absolute;
         top: 11px;
         left: 11px;
@@ -79,6 +133,7 @@ ul li{
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: var(--border-radius);
 
     }
 }
@@ -94,19 +149,53 @@ ul li{
     font-weight: 700;
     border: 1px dashed #121111;
     z-index: 1px;
+    border-radius: var(--border-radius);
 }
 div.tran:hover {
     transform: translate(70px, 50px);
     opacity: .6;
+    border-radius: var(--border-radius);
 
 }
 div.tranx:hover {
     transform: translate(100px, 0px);
     opacity: .6;
+    border-radius: var(--border-radius);
 
 }
 div.trany:hover {
     transform: translate(0px, 100px);
     opacity: .6;
+    border-radius: var(--border-radius);
 
 }
+
+/** ================================================================== */
+/* MOSTAR O USO DA PROPRIEDADE TRANSFORM ROTATE() */
+/** ================================================================== */
+.rota{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+div.grau_45:hover{
+   transform: rotate(45deg);
+}
+div.grau_180:hover{
+   transform: rotate(180deg);
+}
+div.grau_360:hover{
+   transform: rotate(360deg);
+}
+div.eixo_x:hover{
+   transform: rotateX(45deg);
+}
+div.eixo_y:hover{
+   transform: rotateY(45deg);
+}
+
+
+
